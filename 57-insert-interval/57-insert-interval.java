@@ -5,10 +5,7 @@ class Solution {
         
         //1.add all intervals that are non-overlapping to the newInterval
         int i = 0, n = intervals.length;
-        if(n == 0){
-            list.add(newInterval);
-            return list.toArray(new int[list.size()][2]);
-        }
+        
         while(i < n && intervals[i][1] < newInterval[0]) {
             list.add(intervals[i++]);
         }
